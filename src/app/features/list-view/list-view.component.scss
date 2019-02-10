@@ -1,0 +1,38 @@
+.list-wrapper{
+  padding: 20px 40px;
+  width:60%;
+  margin: 2px auto;
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 597px) {
+    width:90%;
+  }
+
+  mat-card{
+    display: flex;
+    justify-content: space-between;
+    opacity: 0.7;
+    &:nth-child(2n){
+      opacity: 0.8;
+    }
+    &:hover{
+      transform: scale(1.04, 1.2);
+    }
+    span, mat-icon {
+      cursor: pointer;
+    }
+  }
+
+  .icons-wrapper{
+    mat-icon{
+      margin: 0 10px;
+      color: brown;
+    }
+
+    button{
+      background-color: crimson;
+    }
+  }
+
+}

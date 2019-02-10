@@ -1,0 +1,36 @@
+.form-section{
+  display: flex;
+  flex-direction: column;
+
+  .address-block{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+
+    mat-form-field{
+      flex-basis: 30%;
+
+      @media screen and (max-width: 567px){
+        flex-basis: 100%;
+      }
+    }
+  }
+}
+
+.add-section{
+  width: 85%;
+  margin: 40px auto;
+  padding: 40px;
+  opacity: 0.9;
+
+  .error-desc{
+    color: crimson;
+  }
+
+  .has-errors{
+    border: 1px solid red;
+    margin: 3px;
+    padding: 0 5px;
+  }
+}

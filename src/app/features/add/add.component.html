@@ -1,0 +1,47 @@
+<section *ngIf="!personUpdated">
+  <h2 class="home-h2">{{ (editId || editId===0) ? 'Edit' : 'Add'}} a Researcher</h2>
+  <mat-card class="add-section">
+    <h2>Enter Details:</h2>
+    <form class="form-section" [formGroup]="newPeopleForm">
+      <p class="error-desc" *ngIf="!newPeopleForm.valid && submitted">Please fill the required highlighted fields</p>
+
+      <mat-form-field [ngClass]="{'has-errors': hasErrors(name)}">
+        <input matInput placeholder="Name" [formControl]="name">
+      </mat-form-field>
+
+      <mat-form-field [ngClass]="{'has-errors': hasErrors(streetAddress)}">
+        <input matInput placeholder="Street" [formControl]="streetAddress">
+      </mat-form-field>
+
+      <mat-form-field [ngClass]="{'has-errors': hasErrors(city)}">
+        <input matInput placeholder="City" [formControl]="city">
+      </mat-form-field>
+
+      <div class="address-block">
+        <mat-form-field [ngClass]="{'has-errors': hasErrors(state)}">
+          <input matInput placeholder="State" [formControl]="state">
+        </mat-form-field>
+
+        <mat-form-field [ngClass]="{'has-errors': hasErrors(zipCode)}">
+          <input matInput placeholder="Zip" [formControl]="zipCode">
+        </mat-form-field>
+
+        <mat-form-field [ngClass]="{'has-errors': hasErrors(country)}">
+          <input matInput placeholder="Country" [formControl]="country">
+        </mat-form-field>
+      </div>
+    </form>
+
+    <div class="navigation-buttons">
+      <button mat-raised-button (click)="addPeople()">{{ (editId || editId===0) ? 'Edit' : 'Add'}}</button>
+      <button mat-raised-button (click)="cancel()">Cancel</button>
+    </div>
+  </mat-card>
+</section>
+
+<section *ngIf="personUpdated">
+  <h2 class="home-h2">Person has been updated</h2>
+  <div class="navigation-buttons">
+    <button mat-raised-button (click)="addAnother()">Add New</button>
+  </div>
+</section>

@@ -1,0 +1,11 @@
+<h2 class="home-h2">Today's Researchers</h2>
+<section class="list-wrapper">
+  <mat-card *ngFor="let item of people">
+    <span (click)="goToDetailsView(item)">{{item.name}}</span>
+    <div class="icons-wrapper">
+      <button mat-raised-button [color]="'primary'" (click)="goToDetailsView(item)">Details</button>
+      <mat-icon (click)="editSelected(item)">edit</mat-icon>
+      <mat-icon (click)="deleteSelected(item)">delete_forever</mat-icon>
+    </div>
+  </mat-card>
+</section>

@@ -1,0 +1,26 @@
+<section class="detail-view" *ngIf="selectedPeople && address">
+  <div class="grid-wrapper">
+    <div class="grid-item">
+      <img [src]="selectedPeople?.avatar"/>
+      <button mat-raised-button="">{{selectedPeople?.name}}</button>
+    </div>
+  </div>
+
+  <div class="details-wrapper">
+    <mat-card>
+      <h2>Address</h2>
+      <div>
+        <p>{{address.streetAddress + ', ' + address.city + ', ' + address.state}}</p>
+        <p>{{address.country + ', ' + address.zipCode}}</p>
+      </div>
+
+      <div class="navigation-buttons">
+        <button mat-raised-button (click)="back()">Back</button>
+      </div>
+    </mat-card>
+  </div>
+</section>
+
+<div *ngIf="!selectedPeople" class="spinner-wrapper">
+  <mat-spinner [color]="'warn'"></mat-spinner>
+</div>

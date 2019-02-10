@@ -1,0 +1,14 @@
+.home-wrapper{
+  .grid-wrapper, .add-section{
+    width: 60% !important;
+    margin: auto !important;
+
+    @media (max-width: 597px) {
+      width: 90% !important;
+    }
+  }
+
+  .grid-wrapper{
+    padding: 5px 40px !important;
+  }
+}

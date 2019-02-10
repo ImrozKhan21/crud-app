@@ -1,0 +1,9 @@
+<section>
+  <mat-card *ngIf="routesConstant[routeName]">
+    <h2>
+      <mat-icon>{{routesConstant[routeName].icon}}</mat-icon>
+      {{routesConstant[routeName].title}}
+    </h2>
+  </mat-card>
+  <router-outlet></router-outlet>
+</section>

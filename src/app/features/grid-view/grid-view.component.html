@@ -1,0 +1,8 @@
+<h2 class="home-h2">Let's look at these beautiful minds</h2>
+<section class="grid-wrapper" *ngIf="people">
+  <div *ngFor="let item of people" class="grid-item">
+    <mat-icon (click)="deleteSelected(item)">remove_circle</mat-icon>
+    <img [src]="item.avatar"/>
+    <button mat-raised-button (click)="goToDetailsView(item)">{{item.name}}</button>
+  </div>
+</section>

@@ -1,0 +1,21 @@
+.details-wrapper{
+  .mat-card {
+    background: black;
+    color: wheat;
+    opacity: 0.7;
+    width:60%;
+    margin: auto;
+    text-align: center;
+  }
+}
+
+.detail-view{
+  .grid-item{
+    height: 300px;
+    width:300px;
+    img{
+      width: 300px;
+      height: 300px;
+    }
+}
+}
