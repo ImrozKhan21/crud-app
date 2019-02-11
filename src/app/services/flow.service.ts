@@ -11,7 +11,7 @@ export class FlowService {
   constructor(private router: Router, private location: Location) {
   }
 
-  navigateToSelectedPeople(id) {
+  public navigateToSelectedPeople(id) {
     this.router.navigate(['/people', id]);
   }
 
@@ -21,11 +21,11 @@ export class FlowService {
     }
   }
 
-  navigateBack() {
+  public navigateBack() {
     this.location.back();
   }
 
-  navigateToEditView(id)  {
+  public navigateToEditView(id)  {
     this.router.navigate(['/add'], {queryParams: {flow: 'edit', id: id}});
   }
 

@@ -1,7 +1,7 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Store} from '@ngrx/store';
 import {IAppState} from '../../store/app.state';
-import {getCurrentRoute, getState} from '../../store/models/route.model';
+import {getCurrentRoute} from '../../store/models/route.model';
 import {RoutesConstant} from '../../models/flow.constants';
 import {Location} from '@angular/common';
 
@@ -26,10 +26,6 @@ export class ContainerComponent implements OnInit {
       setTimeout(() => {
         this.routeName = this.location.path() === '/home' ? 'home' : route;
       }, 0);
-    });
-
-    this.store.select(getState).subscribe(state => {
-      console.log('FULL STATE', state);
     });
   }
 }

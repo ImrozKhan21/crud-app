@@ -15,9 +15,7 @@ import {getAllPeopleState} from '../../store/models/people.model';
 export class GridViewComponent implements OnInit {
   people: Array<People>;
 
-  constructor(private peopleService: PeopleService,
-              private store: Store<IAppState>,
-              private flowService: FlowService) {
+  constructor(private peopleService: PeopleService, private store: Store<IAppState>, private flowService: FlowService) {
   }
 
   ngOnInit() {
@@ -29,7 +27,6 @@ export class GridViewComponent implements OnInit {
 
   goToDetailsView(selectedItem) {
     this.flowService.navigateToSelectedPeople(selectedItem.id);
-    console.log('selectedItem', selectedItem);
   }
 
   deleteSelected(selectedItem) {

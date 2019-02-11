@@ -19,7 +19,8 @@ export class DetailsViewComponent implements OnInit {
   address: Address;
   selectedPeople: People;
 
-  constructor(private route: ActivatedRoute, private peopleService: PeopleService, private store: Store<IAppState>, private flowService: FlowService) {
+  constructor(private route: ActivatedRoute, private peopleService: PeopleService,
+              private store: Store<IAppState>, private flowService: FlowService) {
   }
 
   ngOnInit() {

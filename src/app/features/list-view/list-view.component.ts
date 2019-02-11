@@ -5,6 +5,7 @@ import {PeopleService} from '../../services/people.service';
 import * as RouteActions from '../../store/actions/route.actions';
 import {getAllPeopleState} from '../../store/models/people.model';
 import {FlowService} from '../../services/flow.service';
+import {People} from '../../models/flow.constants';
 
 @Component({
   selector: 'app-list-view',
@@ -12,7 +13,7 @@ import {FlowService} from '../../services/flow.service';
   styleUrls: ['./list-view.component.scss']
 })
 export class ListViewComponent implements OnInit {
-  people;
+  people: Array<People>;
 
   constructor(private peopleService: PeopleService, private store: Store<IAppState>, private flowService: FlowService) {
   }
@@ -26,7 +27,6 @@ export class ListViewComponent implements OnInit {
 
   goToDetailsView(selectedItem) {
     this.flowService.navigateToSelectedPeople(selectedItem.id);
-    console.log('selectedItem', selectedItem);
   }
 
   deleteSelected(selectedItem) {

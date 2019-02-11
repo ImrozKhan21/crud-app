@@ -1,5 +1,4 @@
 import { Action } from '@ngrx/store';
-import {IRouteState} from '../models/route.model';
 
 export enum ERoute {
   SetRoute = '[ERoute] Set Route',

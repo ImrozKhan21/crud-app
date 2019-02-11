@@ -1,5 +1,3 @@
-import {FormControl, Validators} from '@angular/forms';
-
 export interface People {
   id: number;
   name: string;

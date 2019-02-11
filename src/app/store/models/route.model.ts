@@ -5,7 +5,6 @@ export interface IRouteState {
   currentRouteState: string;
 }
 
-
 export const getState = (state: IAppState) => state;
 
 export const getRouteState = (state: IAppState) => state.routeState;
