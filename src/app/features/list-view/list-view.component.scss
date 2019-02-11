@@ -25,6 +25,8 @@
   }
 
   .icons-wrapper{
+    display: flex;
+    align-items: center;
     mat-icon{
       margin: 0 10px;
       color: brown;
