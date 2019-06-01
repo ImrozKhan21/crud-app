@@ -89,7 +89,7 @@ export class AddComponent implements OnInit {
     this.submitted = true;
     if (this.newPeopleForm.valid) {
       this.personUpdated = true;
-      this.editId || this.editId === 0 ? this.peopleService.editPeople(this.newPeopleForm.value, this.selectedPeople)
+      this.editId || (this.editId === 0) ? this.peopleService.editPeople(this.newPeopleForm.value, this.selectedPeople)
         : this.peopleService.addNewPeople(this.newPeopleForm.value);
     }
   }
