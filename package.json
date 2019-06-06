@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "concurrently \"ng serve\" \"npm run json-server\" ",
-    "build": "ng build --prod",
+    "build": "concurrently \"ng build --prod\" \"npm run json-server\" ",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
